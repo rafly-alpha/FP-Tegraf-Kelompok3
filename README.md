@@ -164,7 +164,7 @@ Dokumentasi ini menjelaskan secara detail fungsi dan alur logika dalam program.
 
 ---
 
-## 📌 Tujuan Program
+## Tujuan Program
 Program ini bertujuan untuk:
 
 - Mengeksplorasi semua subsekuensi monotonik meningkat dari suatu urutan bilangan.
@@ -176,9 +176,9 @@ Pendekatan tree dipilih untuk memperlihatkan bagaimana sebuah subsekuensi bisa b
 
 ---
 
-## 🧠 Penjelasan Detail Setiap Bagian Kode
+## Penjelasan Detail Setiap Bagian Kode
 
-### 1️⃣ **Class `Node`**
+### **1. Class `Node`**
 Class ini adalah struktur dasar tree.
 
 Setiap node menyimpan:
@@ -191,7 +191,7 @@ Menjadi representasi satu *state subsequence* dalam pohon yang bertumbuh.
 
 ---
 
-### 2️⃣ **Fungsi `build_tree(arr)`**
+### **2. Fungsi `build_tree(arr)`**
 Fungsi ini membangun pohon dari awal menggunakan array input.
 
 Prosesnya:
@@ -206,7 +206,7 @@ Mengekspansi seluruh kemungkinan subsekuensi meningkat secara sistematis.
 
 ---
 
-### 3️⃣ **Fungsi `explore_add(node, num, new_nodes)`**
+### **3. Fungsi `explore_add(node, num, new_nodes)`**
 Fungsi rekursif yang menentukan apakah sebuah angka bisa ditambahkan ke subsekuensi tertentu.
 
 Aturan yang digunakan:
@@ -222,7 +222,7 @@ Menelusuri seluruh jalur subsekuensi tanpa melewatkan peluang pertumbuhan.
 
 ---
 
-### 4️⃣ **Fungsi `collect_all_sequences(roots)`**
+### **4. Fungsi `collect_all_sequences(roots)`**
 Setelah tree selesai dibangun, fungsi ini mengumpulkan seluruh subsekuensi meningkat.
 
 Langkah-langkah:
@@ -236,7 +236,7 @@ Karena tree dapat menghasilkan subsekuensi yang sama melalui jalur berbeda.
 
 ---
 
-### 5️⃣ **Fungsi `get_all_LIS(sequences)`**
+### **5. Fungsi `get_all_LIS(sequences)`**
 Fungsi ini mencari subsekuensi dengan panjang maksimum.
 
 Alur kerja:
@@ -248,7 +248,7 @@ Jika ada beberapa LIS, semuanya terdeteksi.
 
 ---
 
-### 6️⃣ **Bagian Utama Program**
+### **6. Bagian Utama Program**
 Bagian utama program melakukan tahapan sebagai berikut:
 
 1. Mendefinisikan urutan bilangan sebagai input.
@@ -263,13 +263,13 @@ Output memberikan gambaran lengkap mengenai seluruh perkembangan subsekuensi.
 
 ---
 
-## 📥 Input Program
+## Input Program
 Program menerima list bilangan, contoh: `[4, 1, 13, 7, 0, 2, 8, 11, 3]`
 
 
 ---
 
-## 📤 Output Program
+## Output Program
 Program menghasilkan dua bagian utama output:
 
 ### 🔹 Semua subsekuensi meningkat (tanpa duplikasi)
@@ -280,7 +280,7 @@ Menampilkan:
 - Panjang LIS
 - Seluruh LIS (bisa lebih dari satu)
 
-Contoh: 
+Output: 
 ```
 === Semua subsekuensi meningkat ===
 [0]
@@ -300,7 +300,7 @@ Length : 4
 
 ---
 
-## 📝 Ringkasan Logika Program
+## Ringkasan Logika Program
 1. Tree dibangun untuk mengeksplorasi semua subsekuensi meningkat.
 2. Node pada tree menyimpan subsekuensi hingga tahap tersebut.
 3. Tree diekspansi menggunakan aturan `num > node.value`.
