@@ -31,10 +31,10 @@ def explore_add(node, num, new_nodes):
 
 
 def collect_all_sequences(roots):
-    seqs = set()   # gunakan set untuk hilangkan duplikat
+    seqs = set()
 
     for root in roots:
-        seqs.add(tuple(root.seq))  # tuple bisa dimasukkan ke set
+        seqs.add(tuple(root.seq))
 
     return [list(t) for t in seqs]
 
